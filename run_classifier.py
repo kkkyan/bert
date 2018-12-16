@@ -370,7 +370,7 @@ class NewsProcessor(DataProcessor):
       if i == 0:
         continue
       guid = "train-%d" % (i)
-      text_a = tokenization.convert_to_unicode(line[1])
+      text_a = tokenization.convert_to_unicode(line[3])
       label = tokenization.convert_to_unicode(line[2])
       examples.append(
           InputExample(guid=guid, text_a=text_a, label=label))
@@ -398,24 +398,13 @@ class NewsProcessor(DataProcessor):
       if i == 0:
         continue
       guid = "train-%d" % (i)
-      text_a = tokenization.convert_to_unicode(line[3])
+      text_a = tokenization.convert_to_unicode(line[4])
       examples.append(InputExample(guid=guid, text_a=text_a))
     return examples
 
   def get_labels(self):
     """See base class."""
     return ["0", "1"]
-
-  @classmethod
-  def _read_tsv(cls, input_file, quotechar=None):
-    """Reads a tab separated value file."""
-    with tf.gfile.Open(input_file, "r") as f:
-      reader = csv.reader(f, delimiter=",", quotechar=quotechar)
-      lines = []
-      for line in reader:
-        lines.append(line)
-      return lines
-
 
 def convert_single_example(ex_index, example, label_list, max_seq_length,
                            tokenizer):
