@@ -364,42 +364,42 @@ class NewsProcessor(DataProcessor):
   def get_train_examples(self, data_dir):
     """See base class."""
     lines = self._read_tsv(
-        os.path.join(data_dir,"train.csv"))
+        os.path.join(data_dir,"train_fix.tsv"))
     examples = []
     for (i, line) in enumerate(lines):
       if i == 0:
         continue
       guid = "train-%d" % (i)
-      text_a = tokenization.convert_to_unicode(line[3])
-      label = tokenization.convert_to_unicode(line[2])
+      text_a = tokenization.convert_to_unicode(line[4])
+      label = tokenization.convert_to_unicode(line[3])
       examples.append(
           InputExample(guid=guid, text_a=text_a, label=label))
     return examples
 
   def get_dev_examples(self, data_dir):
     """See base class."""
-    lines = self._read_tsv(os.path.join(data_dir, "test.csv"))
+    lines = self._read_tsv(os.path.join(data_dir, "test_fix.tsv"))
     examples = []
     for (i, line) in enumerate(lines):
       if i == 0:
         continue
       guid = "train-%d" % (i)
-      text_a = tokenization.convert_to_unicode(line[3])
-      label = tokenization.convert_to_unicode(line[2])
+      text_a = tokenization.convert_to_unicode(line[2])
+      label = tokenization.convert_to_unicode(line[4])
       examples.append(
           InputExample(guid=guid, text_a=text_a, label=label))
     return examples
 
   def get_test_examples(self, data_dir):
     """Gets a collection of `InputExample`s for prediction."""
-    lines = self._read_tsv(os.path.join(data_dir, "test.csv"))
+    lines = self._read_tsv(os.path.join(data_dir, "test_fix.tsv"))
     examples = []
     for (i, line) in enumerate(lines):
       if i == 0:
         continue
       guid = "train-%d" % (i)
-      text_a = tokenization.convert_to_unicode(line[3])
-      label = tokenization.convert_to_unicode(line[2])
+      text_a = tokenization.convert_to_unicode(line[2])
+      label = tokenization.convert_to_unicode(line[4])
       examples.append(
           InputExample(guid=guid, text_a=text_a, label=label))
     return examples
