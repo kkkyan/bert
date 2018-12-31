@@ -447,7 +447,7 @@ class OfflineProcessor(DataProcessor):
 
   def get_labels(self):
     """See base class."""
-    with tf.gfile.Open("data/sms/all/OfflineRisk_label.csv", "r") as f:
+    with tf.gfile.Open("sms/data/all/OfflineRisk_label.csv", "r") as f:
       reader = csv.reader(f, delimiter=",")
       labels = []
       for line in reader:
@@ -461,8 +461,8 @@ class OfflineProcessor(DataProcessor):
       if i==0:
         continue
       guid = "%s-%s" % (set_type, i)
-      text_a = tokenization.convert_to_unicode(line[3])
-      label = tokenization.convert_to_unicode(line[5])
+      text_a = tokenization.convert_to_unicode(line[1])
+      label = tokenization.convert_to_unicode(line[2])
       examples.append(
           InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
     return examples
