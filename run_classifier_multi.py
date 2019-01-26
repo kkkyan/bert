@@ -237,13 +237,12 @@ class IndustryProcessor(DataProcessor):
       if i==0:
         continue
       guid = "%s-%s" % (set_type, i)
-      text_a = tokenization.convert_to_unicode(line[4])
-      label1 = tokenization.convert_to_unicode(line[1])
-      label2 = tokenization.convert_to_unicode(line[2])
-      label3 = tokenization.convert_to_unicode(line[3])
+      text_a = tokenization.convert_to_unicode(line[5])
+      label1 = tokenization.convert_to_unicode(line[2])
+      label2 = tokenization.convert_to_unicode(line[3])
+      label3 = tokenization.convert_to_unicode(line[4])
 
       label = [label1,label2,label3]
-      label.remove("0")
 
       examples.append(
           InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
@@ -331,7 +330,13 @@ def convert_single_example(ex_index, example, label_list, max_seq_length,
   assert len(input_mask) == max_seq_length
   assert len(segment_ids) == max_seq_length
 
-  label_id = label_map[example.label]
+  label_id = []
+  for label in example.label:
+    label_id.append(label_map[label])
+
+  assert len(label_id) == 3
+        
+    
   if ex_index < 5:
     tf.logging.info("*** Example ***")
     tf.logging.info("guid: %s" % (example.guid))
@@ -340,7 +345,7 @@ def convert_single_example(ex_index, example, label_list, max_seq_length,
     tf.logging.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
     tf.logging.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
     tf.logging.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
-    tf.logging.info("label: %s (id = %d)" % (example.label, label_id))
+    tf.logging.info("label: %s (id = %s)" % (example.label, label_id))
 
   feature = InputFeatures(
       input_ids=input_ids,
@@ -372,7 +377,7 @@ def file_based_convert_examples_to_features(
     features["input_ids"] = create_int_feature(feature.input_ids)
     features["input_mask"] = create_int_feature(feature.input_mask)
     features["segment_ids"] = create_int_feature(feature.segment_ids)
-    features["label_ids"] = create_int_feature([feature.label_id])
+    features["label_ids"] = create_int_feature(feature.label_id)
     features["is_real_example"] = create_int_feature(
         [int(feature.is_real_example)])
 
@@ -389,7 +394,7 @@ def file_based_input_fn_builder(input_file, seq_length, is_training,
       "input_ids": tf.FixedLenFeature([seq_length], tf.int64),
       "input_mask": tf.FixedLenFeature([seq_length], tf.int64),
       "segment_ids": tf.FixedLenFeature([seq_length], tf.int64),
-      "label_ids": tf.FixedLenFeature([], tf.int64),
+      "label_ids": tf.FixedLenFeature([3], tf.int64),
       "is_real_example": tf.FixedLenFeature([], tf.int64),
   }
 
@@ -484,8 +489,11 @@ def create_model(bert_config, is_training, input_ids, input_mask, segment_ids,
     log_probs = tf.nn.log_softmax(logits, axis=-1)
 
     one_hot_labels = tf.one_hot(labels, depth=num_labels, dtype=tf.float32)
+    print(one_hot_labels.get_shape())
+    sum_labels = tf.reduce_mean(one_hot_labels, axis=1)
+    print(sum_labels.get_shape())
 
-    per_example_loss = -tf.reduce_sum(one_hot_labels * log_probs, axis=-1)
+    per_example_loss = -tf.reduce_mean(sum_labels * log_probs, axis=-1)
     loss = tf.reduce_mean(per_example_loss)
 
     return (loss, per_example_loss, logits, probabilities)
@@ -559,7 +567,7 @@ def model_fn_builder(bert_config, num_labels, init_checkpoint, learning_rate,
       def metric_fn(per_example_loss, label_ids, logits, is_real_example):
         predictions = tf.argmax(logits, axis=-1, output_type=tf.int32)
         accuracy = tf.metrics.accuracy(
-            labels=label_ids, predictions=predictions, weights=is_real_example)
+            labels=label_ids[:,0], predictions=predictions, weights=is_real_example)
         loss = tf.metrics.mean(values=per_example_loss, weights=is_real_example)
         return {
             "eval_accuracy": accuracy,
@@ -659,12 +667,7 @@ def main(_):
   tf.logging.set_verbosity(tf.logging.INFO)
 
   processors = {
-      "cola": ColaProcessor,
-      "mnli": MnliProcessor,
-      "mrpc": MrpcProcessor,
-      "xnli": XnliProcessor,
-      "news": NewsProcessor,
-      "offline": OfflineProcessor,
+      "industry": IndustryProcessor,
   }
 
   tokenization.validate_case_matches_checkpoint(FLAGS.do_lower_case,

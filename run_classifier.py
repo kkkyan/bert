@@ -411,21 +411,21 @@ class NewsProcessor(DataProcessor):
 
   def get_test_examples(self, data_dir):
     """Gets a collection of `InputExample`s for prediction."""
-    lines = self._read_tsv(os.path.join(data_dir, "test_fix.tsv"))
+    lines = self._read_tsv(os.path.join(data_dir, "8559_test.tsv"))
     examples = []
     for (i, line) in enumerate(lines):
       if i == 0:
         continue
       guid = "train-%d" % (i)
-      text_a = tokenization.convert_to_unicode(line[2])
-      label = tokenization.convert_to_unicode(line[4])
+      text_a = tokenization.convert_to_unicode(line[1])
+      label = 0
       examples.append(
           InputExample(guid=guid, text_a=text_a, label=label))
     return examples
 
   def get_labels(self):
     """See base class."""
-    return ["0", "1"]
+    return [0, 1]
 
 class OfflineProcessor(DataProcessor):
   """Processor for the CoLA data set (GLUE version)."""
@@ -433,21 +433,21 @@ class OfflineProcessor(DataProcessor):
   def get_train_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "sms/data/all/OfflineRisk_train.tsv")), "train")
+        self._read_tsv(os.path.join(data_dir, "OfflineRisk_train.tsv")), "train")
 
   def get_dev_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "sms/data/all/OfflineRisk_test.tsv")), "dev")
+        self._read_tsv(os.path.join(data_dir, "OfflineRisk_test.tsv")), "dev")
 
   def get_test_examples(self, data_dir):
     """See base class."""
     return self._create_examples(
-        self._read_tsv(os.path.join(data_dir, "sms/data/all/OfflineRisk_test.tsv")), "test")
+        self._read_tsv(os.path.join(data_dir, "OfflineRisk_test.tsv")), "test")
 
   def get_labels(self):
     """See base class."""
-    with tf.gfile.Open("sms/data/all/OfflineRisk_label.csv", "r") as f:
+    with tf.gfile.Open("project/sms/data/all/OfflineRisk_label.csv", "r") as f:
       reader = csv.reader(f, delimiter=",")
       labels = []
       for line in reader:

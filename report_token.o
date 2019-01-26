@@ -1,0 +1,525 @@
+epoch :1
+2018-12-23 01:02:51
+eval_accuracy = 0.9279141
+eval_loss = 0.1979384
+global_step = 326
+loss = 0.19749053
+--------
+epoch :2
+2018-12-23 01:05:50
+eval_accuracy = 0.90337425
+eval_loss = 0.24937245
+global_step = 652
+loss = 0.24917279
+--------
+epoch :3
+2018-12-23 01:10:21
+eval_accuracy = 0.9355828
+eval_loss = 0.2863718
+global_step = 978
+loss = 0.28464237
+--------
+epoch :4
+2018-12-23 01:16:23
+eval_accuracy = 0.92484665
+eval_loss = 0.36188337
+global_step = 1305
+loss = 0.3596886
+--------
+epoch :5
+2018-12-23 01:24:08
+eval_accuracy = 0.9355828
+eval_loss = 0.34218043
+global_step = 1631
+loss = 0.34010968
+--------
+epoch :6
+2018-12-23 01:33:19
+eval_accuracy = 0.9325153
+eval_loss = 0.37490618
+global_step = 1957
+loss = 0.37263745
+--------
+epoch :7
+2018-12-23 01:44:08
+eval_accuracy = 0.94325155
+eval_loss = 0.3678926
+global_step = 2283
+loss = 0.36565715
+--------
+epoch :8
+2018-12-23 01:56:28
+eval_accuracy = 0.9355828
+eval_loss = 0.42501011
+global_step = 2610
+loss = 0.42242205
+--------
+epoch :9
+2018-12-23 02:10:22
+eval_accuracy = 0.9386503
+eval_loss = 0.4184308
+global_step = 2936
+loss = 0.4158826
+--------
+epoch :10
+2018-12-23 02:25:47
+eval_accuracy = 0.9417178
+eval_loss = 0.44364476
+global_step = 3262
+loss = 0.4409429
+--------
+epoch :11
+2018-12-23 02:42:48
+eval_accuracy = 0.9355828
+eval_loss = 0.4561828
+global_step = 3588
+loss = 0.4534029
+--------
+epoch :12
+2018-12-23 03:01:50
+eval_accuracy = 0.9355828
+eval_loss = 0.48719296
+global_step = 3915
+loss = 0.4842229
+--------
+epoch :13
+2018-12-23 03:22:10
+eval_accuracy = 0.9417178
+eval_loss = 0.51117766
+global_step = 4241
+loss = 0.508061
+--------
+epoch :14
+2018-12-23 03:43:55
+eval_accuracy = 0.9386503
+eval_loss = 0.5044501
+global_step = 4567
+loss = 0.5013751
+--------
+epoch :15
+2018-12-23 04:07:20
+eval_accuracy = 0.9417178
+eval_loss = 0.5012262
+global_step = 4893
+loss = 0.49817017
+--------
+epoch :16
+2018-12-23 04:32:08
+eval_accuracy = 0.9386503
+eval_loss = 0.55603415
+global_step = 5220
+loss = 0.552644
+--------
+epoch :17
+2018-12-23 04:58:39
+eval_accuracy = 0.93711656
+eval_loss = 0.568169
+global_step = 5546
+loss = 0.5647049
+--------
+epoch :18
+2018-12-23 05:26:34
+eval_accuracy = 0.9279141
+eval_loss = 0.6434234
+global_step = 5872
+loss = 0.6395005
+--------
+epoch :19
+2018-12-23 05:56:07
+eval_accuracy = 0.9417178
+eval_loss = 0.52761143
+global_step = 6198
+loss = 0.52439445
+--------
+epoch :20
+2018-12-23 06:27:14
+eval_accuracy = 0.93711656
+eval_loss = 0.54217976
+global_step = 6525
+loss = 0.5388744
+--------
+epoch :21
+2018-12-23 06:59:52
+eval_accuracy = 0.94631904
+eval_loss = 0.5117189
+global_step = 6851
+loss = 0.50859886
+--------
+epoch :22
+2018-12-23 07:34:10
+eval_accuracy = 0.94018406
+eval_loss = 0.5714636
+global_step = 7177
+loss = 0.5679796
+--------
+epoch :23
+2018-12-23 08:10:00
+eval_accuracy = 0.9355828
+eval_loss = 0.6259214
+global_step = 7503
+loss = 0.62210494
+--------
+epoch :24
+2018-12-23 08:47:31
+eval_accuracy = 0.9355828
+eval_loss = 0.6395712
+global_step = 7830
+loss = 0.6356716
+--------
+epoch :25
+2018-12-23 09:26:32
+eval_accuracy = 0.93711656
+eval_loss = 0.5973732
+global_step = 8156
+loss = 0.5937309
+--------
+epoch :1
+2018-12-25 10:32:53
+eval_accuracy = 0.93711656
+eval_loss = 0.16987498
+global_step = 326
+loss = 0.1690897
+--------
+epoch :2
+2018-12-25 10:36:17
+eval_accuracy = 0.92484665
+eval_loss = 0.18059844
+global_step = 326
+loss = 0.18005961
+--------
+epoch :3
+2018-12-25 10:39:30
+eval_accuracy = 0.8911043
+eval_loss = 0.26596165
+global_step = 326
+loss = 0.2672815
+--------
+epoch :4
+2018-12-25 10:42:44
+eval_accuracy = 0.9141104
+eval_loss = 0.22714521
+global_step = 326
+loss = 0.2267433
+--------
+epoch :5
+2018-12-25 10:45:56
+eval_accuracy = 0.8911043
+eval_loss = 0.22703557
+global_step = 326
+loss = 0.22809063
+--------
+epoch :6
+2018-12-25 10:49:12
+eval_accuracy = 0.8911043
+eval_loss = 0.25457403
+global_step = 326
+loss = 0.25552398
+--------
+epoch :7
+2018-12-25 10:52:26
+eval_accuracy = 0.8911043
+eval_loss = 0.26308355
+global_step = 326
+loss = 0.2644366
+--------
+epoch :8
+2018-12-25 10:55:41
+eval_accuracy = 0.9233129
+eval_loss = 0.18736647
+global_step = 326
+loss = 0.18683916
+--------
+epoch :9
+2018-12-25 10:58:53
+eval_accuracy = 0.9233129
+eval_loss = 0.17231604
+global_step = 326
+loss = 0.17180268
+--------
+epoch :10
+2018-12-25 11:02:07
+eval_accuracy = 0.8911043
+eval_loss = 0.24378097
+global_step = 326
+loss = 0.24426788
+--------
+epoch :11
+2018-12-25 11:05:20
+eval_accuracy = 0.8911043
+eval_loss = 0.3304592
+global_step = 326
+loss = 0.3324755
+--------
+epoch :12
+2018-12-25 11:08:32
+eval_accuracy = 0.92484665
+eval_loss = 0.1822671
+global_step = 326
+loss = 0.18294725
+--------
+epoch :13
+2018-12-25 11:11:45
+eval_accuracy = 0.8911043
+eval_loss = 0.26004502
+global_step = 326
+loss = 0.26175886
+--------
+epoch :14
+2018-12-25 11:15:01
+eval_accuracy = 0.892638
+eval_loss = 0.23089124
+global_step = 326
+loss = 0.23178336
+--------
+epoch :15
+2018-12-25 11:18:16
+eval_accuracy = 0.892638
+eval_loss = 0.25319383
+global_step = 326
+loss = 0.2532788
+--------
+epoch :16
+2018-12-25 11:21:29
+eval_accuracy = 0.9279141
+eval_loss = 0.18296495
+global_step = 326
+loss = 0.18293327
+--------
+epoch :17
+2018-12-25 11:24:41
+eval_accuracy = 0.892638
+eval_loss = 0.25093937
+global_step = 326
+loss = 0.2518726
+--------
+epoch :18
+2018-12-25 11:27:55
+eval_accuracy = 0.9125767
+eval_loss = 0.2320068
+global_step = 326
+loss = 0.2323229
+--------
+epoch :19
+2018-12-25 11:31:06
+eval_accuracy = 0.9294478
+eval_loss = 0.18836057
+global_step = 326
+loss = 0.18808675
+--------
+epoch :20
+2018-12-25 11:34:18
+eval_accuracy = 0.91564417
+eval_loss = 0.20367935
+global_step = 326
+loss = 0.20415688
+--------
+epoch :21
+2018-12-25 11:37:30
+eval_accuracy = 0.9294478
+eval_loss = 0.18274613
+global_step = 326
+loss = 0.18253577
+--------
+epoch :22
+2018-12-25 11:40:44
+eval_accuracy = 0.8911043
+eval_loss = 0.3417605
+global_step = 326
+loss = 0.34386575
+--------
+epoch :23
+2018-12-25 11:43:55
+eval_accuracy = 0.8957055
+eval_loss = 0.22430593
+global_step = 326
+loss = 0.2246772
+--------
+epoch :24
+2018-12-25 11:47:11
+eval_accuracy = 0.91564417
+eval_loss = 0.19178377
+global_step = 326
+loss = 0.19210686
+--------
+epoch :25
+2018-12-25 11:50:24
+eval_accuracy = 0.89723927
+eval_loss = 0.25417858
+global_step = 326
+loss = 0.25497973
+--------
+epoch :1
+2018-12-27 21:07:04
+eval_accuracy = 0.93711656
+eval_loss = 0.16987498
+global_step = 326
+loss = 0.1690897
+--------
+epoch :2
+2018-12-27 21:07:49
+eval_accuracy = 0.92484665
+eval_loss = 0.18059844
+global_step = 326
+loss = 0.18005961
+--------
+epoch :3
+2018-12-27 21:08:30
+eval_accuracy = 0.8911043
+eval_loss = 0.26596165
+global_step = 326
+loss = 0.2672815
+--------
+epoch :4
+2018-12-27 21:09:13
+eval_accuracy = 0.9141104
+eval_loss = 0.22714521
+global_step = 326
+loss = 0.2267433
+--------
+epoch :5
+2018-12-27 21:09:56
+eval_accuracy = 0.8911043
+eval_loss = 0.22703557
+global_step = 326
+loss = 0.22809063
+--------
+epoch :6
+2018-12-27 21:10:36
+eval_accuracy = 0.8911043
+eval_loss = 0.25457403
+global_step = 326
+loss = 0.25552398
+--------
+epoch :7
+2018-12-27 21:11:17
+eval_accuracy = 0.8911043
+eval_loss = 0.26308355
+global_step = 326
+loss = 0.2644366
+--------
+epoch :8
+2018-12-27 21:12:00
+eval_accuracy = 0.9233129
+eval_loss = 0.18736647
+global_step = 326
+loss = 0.18683916
+--------
+epoch :9
+2018-12-27 21:12:43
+eval_accuracy = 0.9233129
+eval_loss = 0.17231604
+global_step = 326
+loss = 0.17180268
+--------
+epoch :10
+2018-12-27 21:13:27
+eval_accuracy = 0.8911043
+eval_loss = 0.24378097
+global_step = 326
+loss = 0.24426788
+--------
+epoch :11
+2018-12-27 21:14:11
+eval_accuracy = 0.8911043
+eval_loss = 0.3304592
+global_step = 326
+loss = 0.3324755
+--------
+epoch :12
+2018-12-27 21:14:55
+eval_accuracy = 0.92484665
+eval_loss = 0.1822671
+global_step = 326
+loss = 0.18294725
+--------
+epoch :13
+2018-12-27 21:15:36
+eval_accuracy = 0.8911043
+eval_loss = 0.26004502
+global_step = 326
+loss = 0.26175886
+--------
+epoch :14
+2018-12-27 21:16:21
+eval_accuracy = 0.892638
+eval_loss = 0.23089124
+global_step = 326
+loss = 0.23178336
+--------
+epoch :15
+2018-12-27 21:17:05
+eval_accuracy = 0.892638
+eval_loss = 0.25319383
+global_step = 326
+loss = 0.2532788
+--------
+epoch :16
+2018-12-27 21:17:50
+eval_accuracy = 0.9279141
+eval_loss = 0.18296495
+global_step = 326
+loss = 0.18293327
+--------
+epoch :17
+2018-12-27 21:18:31
+eval_accuracy = 0.892638
+eval_loss = 0.25093937
+global_step = 326
+loss = 0.2518726
+--------
+epoch :18
+2018-12-27 21:19:15
+eval_accuracy = 0.9125767
+eval_loss = 0.2320068
+global_step = 326
+loss = 0.2323229
+--------
+epoch :19
+2018-12-27 21:20:00
+eval_accuracy = 0.9294478
+eval_loss = 0.18836057
+global_step = 326
+loss = 0.18808675
+--------
+epoch :20
+2018-12-27 21:20:41
+eval_accuracy = 0.91564417
+eval_loss = 0.20367935
+global_step = 326
+loss = 0.20415688
+--------
+epoch :21
+2018-12-27 21:21:26
+eval_accuracy = 0.9294478
+eval_loss = 0.18274613
+global_step = 326
+loss = 0.18253577
+--------
+epoch :22
+2018-12-27 21:22:09
+eval_accuracy = 0.8911043
+eval_loss = 0.3417605
+global_step = 326
+loss = 0.34386575
+--------
+epoch :23
+2018-12-27 21:22:51
+eval_accuracy = 0.8957055
+eval_loss = 0.22430593
+global_step = 326
+loss = 0.2246772
+--------
+epoch :24
+2018-12-27 21:23:36
+eval_accuracy = 0.91564417
+eval_loss = 0.19178377
+global_step = 326
+loss = 0.19210686
+--------
+epoch :25
+2018-12-27 21:24:20
+eval_accuracy = 0.89723927
+eval_loss = 0.25417858
+global_step = 326
+loss = 0.25497973
+--------
