@@ -405,7 +405,7 @@ def _is_punctuation(char):
 class CusTokenizer(FullTokenizer):
     # 自定义 tokenize
     def tokenize(self, text):
-      text = super(CusTokenizer, self).basic_tokenizer.tokenize(text)
+      text = self.basic_tokenizer.tokenize(text)
       
       ret = []
       for t in text:
@@ -413,6 +413,8 @@ class CusTokenizer(FullTokenizer):
           pass
         elif 'unused' in t:
           t = '[{}]'.format(t)
+          if t not in self.vocab:
+            t = self.wordpiece_tokenizer.unk_token
         else:
           t = self.wordpiece_tokenizer.unk_token
         ret.append(t)
