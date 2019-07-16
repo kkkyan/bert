@@ -397,3 +397,24 @@ def _is_punctuation(char):
   if cat.startswith("P"):
     return True
   return False
+
+
+'''
+自己定义tokenize
+'''
+class CusTokenizer(FullTokenizer):
+    # 自定义 tokenize
+    def tokenize(self, text):
+      text = super(CusTokenizer, self).basic_tokenizer.tokenize(text)
+      
+      ret = []
+      for t in text:
+        if t in self.vocab:
+          pass
+        elif 'unused' in t:
+          t = '[{}]'.format(t)
+        else:
+          t = self.wordpiece_tokenizer.unk_token
+        ret.append(t)
+        
+      return ret
